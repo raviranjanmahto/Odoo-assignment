@@ -1,12 +1,13 @@
+require("dotenv").config();
 const express = require("express");
-const dotenv = require("dotenv");
 const cookieParser = require("cookie-parser");
 const cors = require("cors");
+
 const connectDB = require("./config/db");
-
 const authRoutes = require("./routes/authRoutes");
+const swapRoutes = require("./routes/swapRoutes");
+const adminRoutes = require("./routes/adminRoutes");
 
-dotenv.config();
 connectDB();
 
 const app = express();
@@ -28,6 +29,8 @@ app.get("/", (req, res) => {
 
 //All api routes
 app.use("/api/auth", authRoutes);
+app.use("/api/swaps", swapRoutes);
+app.use("/api/admin", adminRoutes);
 
 // Start server
 const PORT = process.env.PORT || 7027;
