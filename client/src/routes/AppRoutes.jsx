@@ -25,9 +25,9 @@ const AppRoutes = () => (
     <Route
       path="/user/:id"
       element={
-        // <ProtectedRoute>
-        <UserProfile />
-        // </ProtectedRoute>
+        <ProtectedRoute>
+          <UserProfile />
+        </ProtectedRoute>
       }
     />
 
@@ -43,25 +43,25 @@ const AppRoutes = () => (
     <Route
       path="/dashboard"
       element={
-        // <ProtectedRoute>
-        <Dashboard />
-        // </ProtectedRoute>
+        <ProtectedRoute>
+          <Dashboard />
+        </ProtectedRoute>
       }
     />
     <Route
       path="/profile"
       element={
-        // <ProtectedRoute>
-        <Profile />
-        // </ProtectedRoute>
+        <ProtectedRoute>
+          <Profile />
+        </ProtectedRoute>
       }
     />
     <Route
       path="/swaps"
       element={
-        // <ProtectedRoute>
-        <Swaps />
-        // </ProtectedRoute>
+        <ProtectedRoute>
+          <Swaps />
+        </ProtectedRoute>
       }
     />
     <Route path="*" element={<Login />} />
