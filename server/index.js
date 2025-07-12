@@ -26,7 +26,7 @@ app.get("/", (req, res) => {
   res.send("API is running...");
 });
 
-//Routes
+//All api routes
 app.use("/api/auth", authRoutes);
 
 // Start server
